@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chrome-untrusted://terminal URL Generator</title>
+</head>
+<body>
+    <textarea name="argv" id="argv" cols="30" rows="10" placeholder=""></textarea>
+    <div id="url"></div>
+    <script>
+        var textArea = document.querySelector('textarea');
+        textArea.onkeyup = (ev)=>{
+            console.log("hi");
+            var val = textArea.value;
+            /**
+             * @type {string[]}
+             * 
+             * 
+             * */
+            var argArray = val.split(" ");
+            var hostUrl = "chrome-untrusted://terminal";
+
+        var url = document.querySelector("#url");
+        url.innerHTML = hostUrl + "?command="+argArray[0]+"&args[]="+argArray.slice(1).map((v)=>{
+            return encodeURIComponent(v) + "&"
+        }).join("args[]=");
+        
+        }
+    </script>
+</body>
+</html>

@@ -1,3 +1,6 @@
+zip file contains all files
+i will delete all and upload all files to this repo later
+
 # CryptoCrafter
 The recent discovery of a method of DNP(DO NOT POWERWASH) allows us to modify cryptohome info in stateful. We will create a cryptohome setup app in rma shims, allowing us to finally unenroll without exploiting CRSwifty.
 
